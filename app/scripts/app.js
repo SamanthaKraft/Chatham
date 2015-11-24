@@ -15,17 +15,21 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'rocketleague.controller',
+    'rocketleague.service'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'resources/playerfeature/playerview.html',
         controller: 'playerviewCtrl',
+        controllerAs: 'main'
       })
       .when('/map', {
         templateUrl: 'resources/mapfeature/mapview.html',
         controller: 'mapviewCtrl',
+        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
