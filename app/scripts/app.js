@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('startApp', [
+  .module('rocketleague', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -20,14 +20,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'resources/playerfeature/playerview.html',
+        controller: 'playerviewCtrl',
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/map', {
+        templateUrl: 'resources/mapfeature/mapview.html',
+        controller: 'mapviewCtrl',
       })
       .otherwise({
         redirectTo: '/'
